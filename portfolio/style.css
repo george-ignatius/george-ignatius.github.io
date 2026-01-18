@@ -1,9 +1,9 @@
 :root {
-  --bg-dark: #020617;
-  --bg-main: #0f172a;
-  --accent: #38bdf8;
+  --bg-main: #0b1220;
+  --bg-dark: #060b16;
+  --accent: #3b82f6;
   --text-main: #e5e7eb;
-  --text-muted: #94a3b8;
+  --text-muted: #9ca3af;
   --smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -33,8 +33,8 @@ body {
 
 .header {
   min-height: 100vh;
-  background: linear-gradient(135deg, #020617, #0f172a);
-  padding: 2rem 3rem;
+  background: linear-gradient(135deg, #060b16, #0b1220);
+  padding: 2.5rem 4rem;
 }
 
 .nav {
@@ -44,8 +44,8 @@ body {
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 1.2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .nav-links {
@@ -57,58 +57,47 @@ body {
 .nav-links a {
   color: var(--text-muted);
   text-decoration: none;
-  position: relative;
-  transition: color 0.6s var(--smooth);
+  font-size: 0.95rem;
+  transition: color 0.5s var(--smooth);
 }
 
 .nav-links a:hover {
   color: var(--accent);
 }
 
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 2px;
-  background: var(--accent);
-  transition: width 0.6s var(--smooth);
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
 /* ================= HERO ================= */
 
 .hero {
-  margin-top: 25vh;
-  text-align: center;
+  max-width: 800px;
+  margin: 22vh auto 0;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
 .hero p {
+  font-size: 1.1rem;
   color: var(--text-muted);
-  margin-bottom: 2.5rem;
+  line-height: 1.8;
 }
 
 .btn-primary {
-  padding: 1rem 2.8rem;
+  display: inline-block;
+  margin-top: 2.5rem;
+  padding: 0.9rem 2.6rem;
   border-radius: 30px;
   background: var(--accent);
-  color: var(--bg-dark);
+  color: #020617;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   transition: transform 0.6s var(--smooth);
 }
 
 .btn-primary:hover {
-  transform: scale(1.08);
+  transform: translateY(-3px);
 }
 
 /* ================= SECTIONS ================= */
@@ -116,16 +105,25 @@ body {
 .section {
   max-width: 1100px;
   margin: auto;
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
 }
 
 .section h2 {
   text-align: center;
   margin-bottom: 3.5rem;
+  font-weight: 600;
 }
 
-.dark {
-  background: var(--bg-dark);
+.content-center {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.9;
 }
 
 /* ================= GRID & CARDS ================= */
@@ -133,34 +131,47 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2.5rem;
+  gap: 2.8rem;
 }
 
 .card,
 .accenture-card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px);
-  padding: 2.5rem;
-  border-radius: 24px;
+  background: rgba(255,255,255,0.04);
+  padding: 2.8rem;
+  border-radius: 22px;
   transition: transform 0.8s var(--smooth),
               box-shadow 0.8s var(--smooth);
 }
 
-.card span {
+.card h3,
+.accenture-card h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.card p,
+.accenture-card p {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  line-height: 1.8;
+  font-size: 0.95rem;
 }
 
 .card:hover,
 .accenture-card:hover {
-  transform: translateY(-16px);
-  box-shadow: 0 40px 80px rgba(0,0,0,0.45);
+  transform: translateY(-14px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+}
+
+/* ================= DARK SECTION ================= */
+
+.dark {
+  background: var(--bg-dark);
 }
 
 /* ================= TIMELINE ================= */
 
 .timeline {
-  max-width: 700px;
+  max-width: 750px;
   margin: auto;
 }
 
@@ -170,7 +181,13 @@ body {
 }
 
 .timeline-item h3 {
-  margin: 0.5rem 0 1rem;
+  margin: 0.6rem 0 1rem;
+  font-weight: 600;
+}
+
+.timeline-item p {
+  color: var(--text-muted);
+  line-height: 1.8;
 }
 
 /* ================= FOOTER ================= */
@@ -178,19 +195,19 @@ body {
 .footer {
   background: var(--bg-dark);
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 4.5rem 2rem;
 }
 
 .footer p {
   color: var(--text-muted);
-  margin-top: 0.6rem;
+  margin-top: 0.8rem;
 }
 
 /* ================= REVEAL ================= */
 
 .reveal {
   opacity: 0;
-  transform: translateY(60px);
+  transform: translateY(50px);
   animation: reveal 1.2s var(--smooth) forwards;
 }
 
@@ -204,8 +221,12 @@ body {
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
+  .header {
+    padding: 2rem;
+  }
+
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 
   .nav-links {
