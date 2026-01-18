@@ -3,113 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hariharan S | DevOps Engineer</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>George Ignatius | DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
+<header class="hero">
+  <nav>
+    <h1>George Ignatius</h1>
+    <ul>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Hariharan S</h1>
-    <p class="title">Cloud & DevOps Engineer</p>
+  <div class="hero-text">
+    <h2>DevOps Engineer</h2>
+    <p>AWS • GCP • Kubernetes • CI/CD • Automation</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </div>
+</header>
 
-    <div class="contact">
-      <span>📍 Madurai, India</span>
-      <span>📧 <a href="mailto:hariharanwq@gmail.com">hariharanwq@gmail.com</a></span>
-      <span>🔗 <a href="https://www.linkedin.com/in/hariharanwq" target="_blank">LinkedIn</a></span>
-      <span>📄 <a href="assets/Hariharan_DevOps_Resume.pdf" target="_blank">Download Resume</a></span>
+<section id="skills" class="section">
+  <h2>Core Skills</h2>
+  <div class="grid">
+    <div class="card">☁ AWS & GCP</div>
+    <div class="card">🐳 Docker & Kubernetes</div>
+    <div class="card">🔁 Jenkins & GitHub Actions</div>
+    <div class="card">📊 Prometheus & Grafana</div>
+    <div class="card">🧩 Terraform & Ansible</div>
+    <div class="card">🐧 Linux & Bash</div>
+  </div>
+</section>
+
+<section id="projects" class="section dark">
+  <h2>Featured Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Kubernetes Production Platform</h3>
+      <p>GKE & EKS deployments with ingress, monitoring and scaling.</p>
     </div>
-  </header>
-
-  <!-- SUMMARY -->
-  <section>
-    <h2>Professional Summary</h2>
-    <p>
-      Cloud Operations & DevOps Engineer with 3+ years of experience managing
-      production cloud infrastructure, CI/CD pipelines, Kubernetes clusters,
-      and automation. Proven ability to improve deployment efficiency, reduce
-      cloud costs, and maintain high availability systems.
-    </p>
-  </section>
-
-  <!-- SKILLS -->
-  <section>
-    <h2>Core Skills</h2>
-    <div class="skills-grid">
-      <div>
-        <h3>Cloud & Containers</h3>
-        <p>GCP, GKE, Docker, Kubernetes, Load Balancing</p>
-      </div>
-      <div>
-        <h3>DevOps & CI/CD</h3>
-        <p>Jenkins, Git, Ansible, Bash Scripting</p>
-      </div>
-      <div>
-        <h3>Monitoring</h3>
-        <p>Grafana, Prometheus, Nagios, New Relic</p>
-      </div>
-      <div>
-        <h3>Systems & Networking</h3>
-        <p>Linux (Ubuntu, CentOS), VLAN, NAT, DNS, Firewalls</p>
-      </div>
+    <div class="card">
+      <h3>CI/CD Automation</h3>
+      <p>Jenkins and GitHub Actions pipelines with Docker multi-stage builds.</p>
     </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section>
-    <h2>Professional Experience</h2>
-
-    <div class="job">
-      <h3>Junior DevOps Engineer</h3>
-      <p class="company">Apptivo Software Pvt Ltd | 2022 – Present</p>
-      <ul>
-        <li>Managed Linux servers across cloud and on-prem environments</li>
-        <li>Designed and maintained Jenkins CI/CD pipelines</li>
-        <li>Administered GCP resources including VM instances and GKE clusters</li>
-        <li>Implemented monitoring using Grafana, Nagios, and New Relic</li>
-        <li>Automated routine operational tasks using Bash scripting</li>
-      </ul>
+    <div class="card">
+      <h3>Monitoring & Alerting</h3>
+      <p>Prometheus, Grafana, CloudWatch alerts and Google Chat webhooks.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section>
-    <h2>Key Projects</h2>
-
-    <div class="project">
-      <h3>CI/CD Pipeline Automation</h3>
-      <p>
-        Built automated CI/CD pipelines using Jenkins to streamline build,
-        test, and deployment processes. Reduced deployment time by 40%.
-      </p>
+<section id="experience" class="section">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <span>2022 – Present</span>
+      <h3>DevOps Engineer – Profit Apps</h3>
+      <p>Automated deployments, cloud monitoring, Kubernetes operations.</p>
     </div>
+  </div>
+</section>
 
-    <div class="project">
-      <h3>Elasticsearch Data Migration</h3>
-      <p>
-        Migrated data between Elasticsearch clusters using snapshot and restore.
-        Optimized index performance and automated backup workflows.
-      </p>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section>
-    <h2>Education</h2>
-    <p>
-      <strong>Bachelor of Engineering (ECE)</strong><br />
-      Mepco Schlenk Engineering College, Sivakasi (2017–2021)
-    </p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Hariharan S | DevOps Engineer</p>
-  </footer>
-
-</div>
+<footer id="contact">
+  <h2>Contact</h2>
+  <p>Email: georgeignatius6@gmail.com</p>
+  <p>GitHub: github.com/george-ignatius</p>
+  <p>Blog: george-devops.blogspot.com</p>
+</footer>
 
 </body>
 </html>
