@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>George Ignatius | DevOps Engineer</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="hero">
-  <nav>
-    <h1>George Ignatius</h1>
-    <ul>
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <nav class="nav">
+    <div class="logo">George Ignatius</div>
+    <ul class="nav-links">
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -20,58 +24,69 @@
     </ul>
   </nav>
 
-  <div class="hero-text">
-    <h2>DevOps Engineer</h2>
+  <div class="hero">
+    <h1>DevOps Engineer</h1>
     <p>AWS • GCP • Kubernetes • CI/CD • Automation</p>
-    <a href="#projects" class="btn">View Projects</a>
+    <a href="#projects" class="btn-primary">Explore Work</a>
   </div>
 </header>
 
-<section id="skills" class="section">
-  <h2>Core Skills</h2>
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section reveal">
+  <h2>Core Expertise</h2>
   <div class="grid">
-    <div class="card">☁ AWS & GCP</div>
-    <div class="card">🐳 Docker & Kubernetes</div>
-    <div class="card">🔁 Jenkins & GitHub Actions</div>
-    <div class="card">📊 Prometheus & Grafana</div>
-    <div class="card">🧩 Terraform & Ansible</div>
-    <div class="card">🐧 Linux & Bash</div>
+    <div class="card">☁ Cloud Platforms<br><span>AWS & GCP</span></div>
+    <div class="card">🐳 Containers<br><span>Docker & Kubernetes</span></div>
+    <div class="card">🔁 CI/CD<br><span>Jenkins & GitHub Actions</span></div>
+    <div class="card">📊 Monitoring<br><span>Prometheus & Grafana</span></div>
+    <div class="card">🧩 IaC<br><span>Terraform & Ansible</span></div>
+    <div class="card">🐧 Linux<br><span>Bash & Python</span></div>
   </div>
 </section>
 
-<section id="projects" class="section dark">
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section dark reveal">
   <h2>Featured Projects</h2>
+
   <div class="grid">
-    <div class="card">
+    <div class="accenture-card">
       <h3>Kubernetes Production Platform</h3>
-      <p>GKE & EKS deployments with ingress, monitoring and scaling.</p>
+      <p>Designed and managed GKE & EKS clusters with ingress, autoscaling, and monitoring.</p>
     </div>
-    <div class="card">
+
+    <div class="accenture-card">
       <h3>CI/CD Automation</h3>
-      <p>Jenkins and GitHub Actions pipelines with Docker multi-stage builds.</p>
+      <p>Jenkins & GitHub Actions pipelines with Docker multi-stage builds and rollback strategy.</p>
     </div>
-    <div class="card">
+
+    <div class="accenture-card">
       <h3>Monitoring & Alerting</h3>
-      <p>Prometheus, Grafana, CloudWatch alerts and Google Chat webhooks.</p>
+      <p>CloudWatch, Prometheus, Grafana dashboards with SNS & Google Chat alerts.</p>
     </div>
   </div>
 </section>
 
-<section id="experience" class="section">
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="section reveal">
   <h2>Experience</h2>
+
   <div class="timeline">
     <div class="timeline-item">
       <span>2022 – Present</span>
-      <h3>DevOps Engineer – Profit Apps</h3>
-      <p>Automated deployments, cloud monitoring, Kubernetes operations.</p>
+      <h3>DevOps Engineer – Profit Apps India Pvt Ltd</h3>
+      <p>
+        Optimized deployments, automated infrastructure, implemented observability,
+        and reduced deployment time by 10 minutes.
+      </p>
     </div>
   </div>
 </section>
 
-<footer id="contact">
-  <h2>Contact</h2>
+<!-- ================= CONTACT ================= -->
+<footer id="contact" class="footer reveal">
+  <h2>Get in Touch</h2>
   <p>Email: georgeignatius6@gmail.com</p>
-  <p>GitHub: github.com/george-ignatius</p>
+  <p>GitHub: github.com/yourusername</p>
   <p>Blog: george-devops.blogspot.com</p>
 </footer>
 
