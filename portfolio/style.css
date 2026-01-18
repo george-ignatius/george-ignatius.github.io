@@ -1,109 +1,214 @@
+:root {
+  --bg-dark: #020617;
+  --bg-main: #0f172a;
+  --accent: #38bdf8;
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+  --smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: #0f172a;
-  color: #e5e7eb;
-  line-height: 1.6;
+  background: var(--bg-main);
+  color: var(--text-main);
+  animation: fadeIn 1.2s var(--smooth);
 }
 
-.hero {
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+/* ================= HEADER ================= */
+
+.header {
   min-height: 100vh;
-  background: linear-gradient(135deg, #020617, #020617, #0f172a);
-  padding: 2rem;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  padding: 2rem 3rem;
 }
 
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav ul {
-  display: flex;
-  gap: 2rem;
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav-links {
   list-style: none;
+  display: flex;
+  gap: 2.5rem;
 }
 
-nav a {
-  color: #94a3b8;
+.nav-links a {
+  color: var(--text-muted);
   text-decoration: none;
+  position: relative;
+  transition: color 0.6s var(--smooth);
 }
 
-nav a:hover {
-  color: #38bdf8;
+.nav-links a:hover {
+  color: var(--accent);
 }
 
-.hero-text {
-  margin-top: 20vh;
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.6s var(--smooth);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  margin-top: 25vh;
   text-align: center;
 }
 
-.hero-text h2 {
-  font-size: 3rem;
-  color: #38bdf8;
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.8rem 2rem;
+.hero p {
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.btn-primary {
+  padding: 1rem 2.8rem;
   border-radius: 30px;
-  background: #38bdf8;
-  color: #020617;
+  background: var(--accent);
+  color: var(--bg-dark);
   text-decoration: none;
-  transition: transform 0.3s;
+  font-weight: 600;
+  transition: transform 0.6s var(--smooth);
 }
 
-.btn:hover {
-  transform: scale(1.05);
+.btn-primary:hover {
+  transform: scale(1.08);
 }
+
+/* ================= SECTIONS ================= */
 
 .section {
-  padding: 4rem 2rem;
   max-width: 1100px;
   margin: auto;
+  padding: 5rem 2rem;
 }
 
 .section h2 {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 .dark {
-  background: #020617;
+  background: var(--bg-dark);
 }
+
+/* ================= GRID & CARDS ================= */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
 }
 
-.card {
+.card,
+.accenture-card {
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(12px);
+  padding: 2.5rem;
+  border-radius: 24px;
+  transition: transform 0.8s var(--smooth),
+              box-shadow 0.8s var(--smooth);
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(56,189,248,0.3);
-}
-
-.timeline-item span {
-  color: #38bdf8;
+.card span {
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
-footer {
+.card:hover,
+.accenture-card:hover {
+  transform: translateY(-16px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.45);
+}
+
+/* ================= TIMELINE ================= */
+
+.timeline {
+  max-width: 700px;
+  margin: auto;
+}
+
+.timeline-item span {
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+.timeline-item h3 {
+  margin: 0.5rem 0 1rem;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  background: var(--bg-dark);
   text-align: center;
-  padding: 3rem 1rem;
-  background: #020617;
+  padding: 4rem 2rem;
+}
+
+.footer p {
+  color: var(--text-muted);
+  margin-top: 0.6rem;
+}
+
+/* ================= REVEAL ================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: reveal 1.2s var(--smooth) forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
 }
