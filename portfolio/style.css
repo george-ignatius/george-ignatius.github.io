@@ -1,81 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
+}
+
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f8fafc;
-  color: #1f2933;
-  margin: 0;
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #020617, #020617, #0f172a);
+  padding: 2rem;
 }
 
-header {
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.2rem;
-}
-
-.title {
-  color: #475569;
-  font-size: 1.1rem;
-}
-
-.contact {
-  margin-top: 10px;
+nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  font-size: 0.95rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.contact a {
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  color: #94a3b8;
   text-decoration: none;
-  color: #2563eb;
 }
 
-section {
-  margin-top: 35px;
+nav a:hover {
+  color: #38bdf8;
 }
 
-h2 {
-  font-size: 1.3rem;
-  border-bottom: 1px solid #d1d5db;
-  padding-bottom: 5px;
+.hero-text {
+  margin-top: 20vh;
+  text-align: center;
 }
 
-.skills-grid {
+.hero-text h2 {
+  font-size: 3rem;
+  color: #38bdf8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  background: #38bdf8;
+  color: #020617;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dark {
+  background: #020617;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  gap: 2rem;
 }
 
-.skills-grid h3 {
-  margin-bottom: 5px;
-  font-size: 1rem;
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.job, .project {
-  margin-top: 15px;
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(56,189,248,0.3);
 }
 
-.company {
-  font-size: 0.95rem;
-  color: #475569;
-}
-
-ul {
-  padding-left: 20px;
+.timeline-item span {
+  color: #38bdf8;
+  font-size: 0.9rem;
 }
 
 footer {
-  margin-top: 50px;
   text-align: center;
-  font-size: 0.85rem;
-  color: #64748b;
+  padding: 3rem 1rem;
+  background: #020617;
 }
