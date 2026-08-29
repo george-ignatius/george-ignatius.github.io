@@ -393,7 +393,7 @@
     </div>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">3<span>+</span></div>
+        <div class="stat-num">4<span>+</span></div>
         <div class="stat-lbl">Years Experience</div>
       </div>
       <div class="stat-item">
@@ -435,6 +435,8 @@
         <span class="chip">Prometheus</span>
         <span class="chip">Jenkins</span>
         <span class="chip">Python</span>
+        <span class="chip">Pub/Sub</span>
+        <span class="chip">DR & BCP</span>
       </div>
     </div>
     <div class="about-card">
@@ -479,10 +481,22 @@
   <div class="skills-grid">
     <div class="skill-card reveal">
       <div class="skill-icon">☁️</div>
-      <div class="skill-name">Cloud Platforms</div>
+      <div class="skill-name">AWS Services</div>
       <div class="skill-tags">
-        <span class="skill-tag">AWS EC2</span><span class="skill-tag">Lambda</span><span class="skill-tag">Redshift</span>
-        <span class="skill-tag">CloudWatch</span><span class="skill-tag">GCP</span><span class="skill-tag">Cloud Functions</span>
+        <span class="skill-tag">EC2</span><span class="skill-tag">ELB</span><span class="skill-tag">IAM</span>
+        <span class="skill-tag">VPC</span><span class="skill-tag">SNS</span><span class="skill-tag">SES</span>
+        <span class="skill-tag">Lambda</span><span class="skill-tag">CloudWatch</span><span class="skill-tag">EKS</span>
+        <span class="skill-tag">EventBridge</span><span class="skill-tag">Redshift</span><span class="skill-tag">ECR</span>
+        <span class="skill-tag">S3</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🌩️</div>
+      <div class="skill-name">GCP Services</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Compute Engine</span><span class="skill-tag">VPC</span><span class="skill-tag">Cloud Run</span>
+        <span class="skill-tag">IAM</span><span class="skill-tag">GKE</span><span class="skill-tag">GCS</span>
+        <span class="skill-tag">GCR</span><span class="skill-tag">Pub/Sub</span><span class="skill-tag">OpenTelemetry</span>
       </div>
     </div>
     <div class="skill-card reveal">
@@ -512,7 +526,15 @@
       <div class="skill-name">Monitoring & Logging</div>
       <div class="skill-tags">
         <span class="skill-tag">Prometheus</span><span class="skill-tag">Grafana</span><span class="skill-tag">ELK Stack</span>
-        <span class="skill-tag">Datadog</span><span class="skill-tag">New Relic</span>
+        <span class="skill-tag">Datadog</span><span class="skill-tag">New Relic</span><span class="skill-tag">OpenTelemetry</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🛡️</div>
+      <div class="skill-name">Security & Compliance</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Weekly Vulnerability Scanning</span><span class="skill-tag">Penetration Testing</span>
+        <span class="skill-tag">Monthly DR Drills</span><span class="skill-tag">BCP</span>
       </div>
     </div>
     <div class="skill-card reveal">
@@ -561,11 +583,13 @@
       <li>Performed Kubernetes cluster version upgrades (EKS & GKE) with zero/minimal downtime in production.</li>
       <li>Executed GKE CA certificate upgrades, maintaining cluster security and avoiding service disruptions.</li>
       <li>Built and maintained CI/CD pipelines using Jenkins and GitHub Actions for automated deployments.</li>
-      <li>Implemented Docker image vulnerability scanning in CI/CD pipelines to enhance container security.</li>
+      <li>Performed weekly Docker image vulnerability scans and conducted penetration testing to strengthen application and infrastructure security posture.</li>
       <li>Designed centralized logging architecture using ELK Stack (Elasticsearch, Fluentd, Kibana).</li>
-      <li>Implemented monitoring and alerting using Prometheus, Grafana, Datadog, and New Relic.</li>
+      <li>Implemented monitoring and alerting using Prometheus, Grafana, Datadog, New Relic, and OpenTelemetry.</li>
       <li>Automated operational workflows using Bash and Python scripts, reducing manual effort significantly.</li>
+      <li>Configured AWS Lambda, EventBridge, and GCP Cloud Run/Pub/Sub for serverless and event-driven automation.</li>
       <li>Designed and deployed AWS Redshift Serverless for scalable and cost-efficient data analytics.</li>
+      <li>Conducted monthly Disaster Recovery (DR) and Business Continuity Planning (BCP) drills across AWS and GCP to validate infrastructure resilience and recovery readiness.</li>
       <li>Integrated Google Chat webhook alerts and Atlassian Statuspage for real-time incident communication.</li>
     </ul>
   </div>
@@ -588,7 +612,7 @@
     <div class="proj-card reveal">
       <div class="proj-num">02</div>
       <div class="proj-title">CI/CD Pipeline Automation</div>
-      <div class="proj-desc">End-to-end automated build and deploy pipelines with integrated Docker image vulnerability scanning and security gates.</div>
+      <div class="proj-desc">End-to-end automated build and deploy pipelines with integrated weekly Docker image vulnerability scanning, penetration testing, and security gates.</div>
       <div class="proj-tags"><span class="proj-tag">Jenkins</span><span class="proj-tag">GitHub Actions</span><span class="proj-tag">Docker</span></div>
     </div>
     <div class="proj-card reveal">
@@ -614,6 +638,12 @@
       <div class="proj-title">Multi-Stage Docker Builds</div>
       <div class="proj-desc">Optimized Docker image builds using multi-stage pipelines, reducing deployment time by 10+ minutes and cutting image size significantly.</div>
       <div class="proj-tags"><span class="proj-tag">Docker</span><span class="proj-tag">CI/CD</span><span class="proj-tag">Optimization</span></div>
+    </div>
+    <div class="proj-card reveal">
+      <div class="proj-num">07</div>
+      <div class="proj-title">Disaster Recovery & BCP</div>
+      <div class="proj-desc">Established monthly DR and BCP drills across AWS and GCP to validate backup integrity, test recovery procedures, and reduce recovery time for critical workloads.</div>
+      <div class="proj-tags"><span class="proj-tag">DR</span><span class="proj-tag">BCP</span><span class="proj-tag">Resilience</span></div>
     </div>
   </div>
 </section>
